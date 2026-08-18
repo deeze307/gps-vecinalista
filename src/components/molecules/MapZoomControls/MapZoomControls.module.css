@@ -1,0 +1,44 @@
+.controls {
+  position: absolute;
+  right: var(--space-4);
+  bottom: var(--space-5);
+  z-index: var(--z-map-controls);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.button:hover {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.locate {
+  color: var(--color-accent-hover);
+}
+
+.locate:hover {
+  background: var(--color-accent);
+  color: #3a2205;
+}

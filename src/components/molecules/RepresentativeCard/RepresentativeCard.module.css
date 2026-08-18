@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.identity {
+  min-width: 0;
+  flex: 1;
+}
+
+.name {
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.name a:hover {
+  text-decoration: underline;
+}
+
+.role {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.bio {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.organization {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.inactive {
+  opacity: 0.6;
+}

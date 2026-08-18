@@ -1,0 +1,44 @@
+.orgCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.orgName {
+  font-size: var(--text-base);
+  color: var(--color-primary);
+}
+
+.orgMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.factList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.factValue {
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: right;
+}

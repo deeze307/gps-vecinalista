@@ -1,0 +1,1 @@
+export { AdminRepresentativeFormPage } from './AdminRepresentativeFormPage';

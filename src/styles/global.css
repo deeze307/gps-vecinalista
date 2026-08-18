@@ -1,0 +1,49 @@
+@import './tokens.css';
+@import './reset.css';
+@import 'leaflet/dist/leaflet.css';
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Utilidades mínimas y compartidas. No es un framework de utilidades:
+   todo lo demás vive en el CSS Module de cada componente. */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+/* Texto sólo para lectores de pantalla. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Leaflet pinta sus propios paneles con z-index altísimos; los bajamos para que
+   el header y el panel de detalle siempre queden por encima del mapa. */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: var(--z-map);
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: #eae6de;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.75) !important;
+}

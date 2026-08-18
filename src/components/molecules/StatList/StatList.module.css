@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+
+.value {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.label {
+  font-size: var(--text-sm);
+  opacity: 0.85;
+}
+
+/* Variante para fondos claros (fichas, panel admin). */
+.onLight .stat {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-primary);
+}

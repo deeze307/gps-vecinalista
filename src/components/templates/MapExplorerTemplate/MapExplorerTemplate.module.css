@@ -1,0 +1,73 @@
+/* Mobile first: el mapa arriba y el panel deslizado por encima del borde. */
+.explorer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  background: var(--color-bg);
+}
+
+.mapArea {
+  position: relative;
+  height: 46dvh;
+  min-height: 260px;
+  flex-shrink: 0;
+}
+
+.panelArea {
+  position: relative;
+  z-index: var(--z-sheet);
+  margin-top: calc(var(--space-4) * -1);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background: var(--color-surface-alt);
+  box-shadow: var(--shadow-panel);
+  padding: var(--space-3) var(--space-4) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 45dvh;
+}
+
+.grabber {
+  width: 44px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: var(--color-border-strong);
+  margin: 0 auto var(--space-2);
+  flex-shrink: 0;
+}
+
+.panelBody {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .explorer {
+    display: grid;
+    grid-template-columns: 1fr minmax(360px, 420px);
+    height: calc(100dvh - var(--header-height));
+    flex: none;
+  }
+
+  .mapArea {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .panelArea {
+    margin-top: 0;
+    border-radius: 0;
+    border-left: 1px solid var(--color-border);
+    box-shadow: none;
+    padding: var(--space-5);
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .grabber {
+    display: none;
+  }
+}
