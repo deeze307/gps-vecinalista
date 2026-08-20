@@ -10,6 +10,11 @@
     "moduleDetection": "force",
     "noEmit": true,
     "strict": true,
+
+    // Explícito a propósito: `vite.config.ts` usa `node:url` e `import.meta.url`.
+    // Sin esto, TypeScript los resuelve sólo si encuentra un @types/node suelto en
+    // algún directorio padre — funciona en una máquina y falla en el CI.
+    "types": ["node"],
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo"
   },
   "include": ["vite.config.ts"]

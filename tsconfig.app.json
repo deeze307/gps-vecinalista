@@ -20,7 +20,13 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
 
-    "baseUrl": ".",
+    // El código de `src/` corre en el navegador: no debe usar APIs de Node.
+    // La lista vacía evita que se cuelen tipos de Node por auto-inclusión.
+    // Los tipos de Vite entran por el /// reference de `src/vite-env.d.ts`.
+    "types": [],
+
+    // Sin `baseUrl` (deprecado desde TS 6): las rutas de `paths` se resuelven
+    // relativas a este archivo.
     "paths": {
       "@/*": ["./src/*"]
     },
