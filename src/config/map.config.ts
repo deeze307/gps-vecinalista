@@ -18,12 +18,17 @@ export const MAP_ZOOM = {
 } as const;
 
 /**
- * Tiles claros y neutros (Carto Positron): la idea del concepto es
+ * Mapa base gris del IGN (Argenmap): neutro, sin API key y con la cartografía
+ * oficial argentina (Islas Malvinas, Antártida). Encaja con el concepto
  * "Argentina neutra + pins naranjas".
+ *
+ * Carto Positron dejó de servir tiles fuera de localhost sin API key
+ * (muestra la marca de agua "API KEY REQUIRED").
  */
 export const TILE_LAYER = {
-  url: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  url: 'https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{y}.png',
   attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
+    '<a href="https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion" target="_blank">Instituto Geográfico Nacional</a> + <a href="https://www.osm.org/copyright" target="_blank">OpenStreetMap</a>',
+  /** El servicio es TMS: el eje Y está invertido respecto de XYZ. */
+  tms: true,
 } as const;

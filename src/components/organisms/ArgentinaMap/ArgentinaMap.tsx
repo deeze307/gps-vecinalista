@@ -93,7 +93,7 @@ export const ArgentinaMap = ({
         <TileLayer
           url={TILE_LAYER.url}
           attribution={TILE_LAYER.attribution}
-          subdomains={TILE_LAYER.subdomains}
+          tms={TILE_LAYER.tms}
         />
 
         {cities.map((city) => (
