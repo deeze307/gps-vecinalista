@@ -40,7 +40,9 @@
   min-width: 0;
 }
 
+/* Son <span> (dentro de un <button>): block para que apilen y el ellipsis funcione. */
 .name {
+  display: block;
   font-weight: 600;
   color: var(--color-primary);
   white-space: nowrap;
@@ -49,6 +51,7 @@
 }
 
 .subtitle {
+  display: block;
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   white-space: nowrap;
